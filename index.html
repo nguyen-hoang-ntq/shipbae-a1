@@ -76,8 +76,8 @@
         font-size: 180px;
         font-weight: 900;
         text-align: center;
-        color: rgba(255, 255, 255, 0.08);
-        text-shadow: 0 0 50px rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.15);
+        text-shadow: 0 0 80px rgba(255, 255, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.1);
         z-index: 1;
         top: 50%;
         left: 50%;
@@ -86,6 +86,8 @@
         user-select: none;
         pointer-events: none;
         white-space: nowrap;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+        filter: brightness(1.2) contrast(1.1);
       }
       
       .main-title {
@@ -173,6 +175,18 @@
         text-align: center;
       }
       
+      .countdown-label {
+        font-size: 24px;
+        font-weight: 600;
+        color: #00FFFF;
+        text-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+        text-align: center;
+        margin-bottom: 10px;
+        font-family: 'JetBrains Mono', monospace;
+        letter-spacing: 2px;
+        opacity: 0.9;
+      }
+      
       .countdown-number {
         font-size: 72px;
         font-weight: 900;
@@ -253,94 +267,16 @@
         height: 100%;
         top: 0;
         left: 0;
-        opacity: 0.2;
-        background-image: 
-          /* North America dots */
-          radial-gradient(circle at 15% 35%, rgba(255,255,255,0.8) 1.5px, transparent 1.5px),
-          radial-gradient(circle at 18% 32%, rgba(255,255,255,0.6) 1px, transparent 1px),
-          radial-gradient(circle at 20% 38%, rgba(255,255,255,0.7) 1px, transparent 1px),
-          radial-gradient(circle at 22% 35%, rgba(255,255,255,0.5) 1px, transparent 1px),
-          radial-gradient(circle at 16% 40%, rgba(255,255,255,0.6) 1px, transparent 1px),
-          radial-gradient(circle at 25% 42%, rgba(255,255,255,0.4) 1px, transparent 1px),
-          
-          /* South America dots */
-          radial-gradient(circle at 28% 55%, rgba(255,255,255,0.7) 1.5px, transparent 1.5px),
-          radial-gradient(circle at 30% 60%, rgba(255,255,255,0.6) 1px, transparent 1px),
-          radial-gradient(circle at 32% 65%, rgba(255,255,255,0.5) 1px, transparent 1px),
-          radial-gradient(circle at 29% 70%, rgba(255,255,255,0.6) 1px, transparent 1px),
-          radial-gradient(circle at 31% 75%, rgba(255,255,255,0.4) 1px, transparent 1px),
-          
-          /* Europe dots */
-          radial-gradient(circle at 48% 25%, rgba(255,255,255,0.8) 1.5px, transparent 1.5px),
-          radial-gradient(circle at 50% 28%, rgba(255,255,255,0.6) 1px, transparent 1px),
-          radial-gradient(circle at 52% 30%, rgba(255,255,255,0.5) 1px, transparent 1px),
-          radial-gradient(circle at 49% 32%, rgba(255,255,255,0.7) 1px, transparent 1px),
-          
-          /* Africa dots */
-          radial-gradient(circle at 52% 45%, rgba(255,255,255,0.8) 1.5px, transparent 1.5px),
-          radial-gradient(circle at 54% 50%, rgba(255,255,255,0.6) 1px, transparent 1px),
-          radial-gradient(circle at 51% 55%, rgba(255,255,255,0.7) 1px, transparent 1px),
-          radial-gradient(circle at 53% 60%, rgba(255,255,255,0.5) 1px, transparent 1px),
-          radial-gradient(circle at 55% 52%, rgba(255,255,255,0.4) 1px, transparent 1px),
-          
-          /* Asia dots */
-          radial-gradient(circle at 70% 30%, rgba(255,255,255,0.8) 1.5px, transparent 1.5px),
-          radial-gradient(circle at 75% 25%, rgba(255,255,255,0.6) 1px, transparent 1px),
-          radial-gradient(circle at 80% 32%, rgba(255,255,255,0.7) 1px, transparent 1px),
-          radial-gradient(circle at 72% 35%, rgba(255,255,255,0.5) 1px, transparent 1px),
-          radial-gradient(circle at 78% 38%, rgba(255,255,255,0.6) 1px, transparent 1px),
-          radial-gradient(circle at 82% 28%, rgba(255,255,255,0.4) 1px, transparent 1px),
-          
-          /* Australia dots */
-          radial-gradient(circle at 78% 70%, rgba(255,255,255,0.7) 1.5px, transparent 1.5px),
-          radial-gradient(circle at 80% 72%, rgba(255,255,255,0.5) 1px, transparent 1px),
-          radial-gradient(circle at 82% 68%, rgba(255,255,255,0.6) 1px, transparent 1px),
-          
-          /* Additional scattered dots for islands and details */
-          radial-gradient(circle at 85% 45%, rgba(255,255,255,0.4) 1px, transparent 1px),
-          radial-gradient(circle at 12% 65%, rgba(255,255,255,0.5) 1px, transparent 1px),
-          radial-gradient(circle at 65% 15%, rgba(255,255,255,0.3) 1px, transparent 1px),
-          radial-gradient(circle at 88% 55%, rgba(255,255,255,0.4) 1px, transparent 1px);
-        background-size: 100% 100%;
-        animation: worldMapFloat 25s linear infinite;
+        background-image: url('background.png');
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        opacity: 0.12;
+        filter: brightness(1.8) contrast(0.7) blur(0.75px);
+        animation: worldMapFloat 30s linear infinite;
       }
       
-      .network-overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-      }
-      
-      .network-node {
-        position: absolute;
-        width: 6px;
-        height: 6px;
-        background: #00FFFF;
-        border-radius: 50%;
-        box-shadow: 0 0 12px rgba(0, 255, 255, 0.8);
-        animation: networkPulse 2.5s infinite ease-in-out;
-      }
-      
-      .network-node::before {
-        content: '';
-        position: absolute;
-        top: -3px;
-        left: -3px;
-        width: 12px;
-        height: 12px;
-        border: 1px solid rgba(0, 255, 255, 0.4);
-        border-radius: 50%;
-        animation: networkRipple 2.5s infinite ease-out;
-      }
-      
-      .network-line {
-        position: absolute;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.6), transparent);
-        animation: dataFlowNetwork 3s infinite ease-in-out;
-      }
+
       
       .hologram-effect {
         position: absolute;
@@ -527,41 +463,7 @@
         to { width: 100%; }
       }
       
-      @keyframes networkPulse {
-        0%, 100% {
-          transform: scale(1);
-          opacity: 0.8;
-          box-shadow: 0 0 12px rgba(0, 255, 255, 0.8);
-        }
-        50% {
-          transform: scale(1.4);
-          opacity: 1;
-          box-shadow: 0 0 20px rgba(0, 255, 255, 1);
-        }
-      }
-      
-      @keyframes networkRipple {
-        0% {
-          transform: scale(1);
-          opacity: 0.6;
-        }
-        100% {
-          transform: scale(3);
-          opacity: 0;
-        }
-      }
-      
-      @keyframes dataFlowNetwork {
-        0% {
-          opacity: 0.2;
-        }
-        50% {
-          opacity: 0.8;
-        }
-        100% {
-          opacity: 0.2;
-        }
-      }
+
       
       @keyframes blink {
         0%, 50% {
@@ -822,6 +724,10 @@
            font-size: clamp(20px, 6vw, 32px);
          }
          
+         .countdown-label {
+           font-size: clamp(16px, 4vw, 20px);
+         }
+         
          .countdown-number {
            font-size: clamp(32px, 8vw, 48px);
          }
@@ -951,23 +857,7 @@
         <!-- Dotted world map pattern -->
         <div class="world-dots-pattern"></div>
         
-        <!-- Network connections overlay -->
-        <div class="network-overlay">
-          <div class="network-node" style="top: 25%; left: 15%;"></div>
-          <div class="network-node" style="top: 20%; left: 45%;"></div>
-          <div class="network-node" style="top: 15%; left: 65%;"></div>
-          <div class="network-node" style="top: 35%; left: 75%;"></div>
-          <div class="network-node" style="top: 55%; left: 25%;"></div>
-          <div class="network-node" style="top: 70%; left: 45%;"></div>
-          <div class="network-node" style="top: 65%; left: 70%;"></div>
-          
-          <div class="network-line" style="top: 27%; left: 17%; width: 25%; transform: rotate(-10deg);"></div>
-          <div class="network-line" style="top: 22%; left: 47%; width: 15%; transform: rotate(-25deg);"></div>
-          <div class="network-line" style="top: 17%; left: 67%; width: 6%; transform: rotate(35deg);"></div>
-          <div class="network-line" style="top: 45%; left: 27%; width: 15%; transform: rotate(45deg);"></div>
-          <div class="network-line" style="top: 60%; left: 47%; width: 20%; transform: rotate(15deg);"></div>
-          <div class="network-line" style="top: 50%; left: 35%; width: 8%; transform: rotate(-60deg);"></div>
-        </div>
+
       </div>
       
       <!-- Hologram Effect -->
@@ -1004,6 +894,7 @@
                  <div class="schedule-container">
            <div class="schedule">
                          <div id="countdown-container">
+              <div class="countdown-label">TO. Demo in</div>
               <div id="countdown-display">
                 <span id="minutes" class="countdown-number">15</span>
                 <span class="countdown-number">:</span>

@@ -253,24 +253,56 @@
         height: 100%;
         top: 0;
         left: 0;
-        opacity: 0.15;
+        opacity: 0.2;
         background-image: 
-          radial-gradient(circle at 20% 25%, rgba(255,255,255,0.8) 1px, transparent 1px),
-          radial-gradient(circle at 80% 25%, rgba(255,255,255,0.6) 1px, transparent 1px),
-          radial-gradient(circle at 40% 45%, rgba(255,255,255,0.7) 1px, transparent 1px),
-          radial-gradient(circle at 60% 45%, rgba(255,255,255,0.5) 1px, transparent 1px),
-          radial-gradient(circle at 15% 65%, rgba(255,255,255,0.8) 1px, transparent 1px),
-          radial-gradient(circle at 85% 65%, rgba(255,255,255,0.6) 1px, transparent 1px),
-          radial-gradient(circle at 25% 85%, rgba(255,255,255,0.7) 1px, transparent 1px),
-          radial-gradient(circle at 75% 85%, rgba(255,255,255,0.5) 1px, transparent 1px),
-          radial-gradient(circle at 50% 15%, rgba(255,255,255,0.6) 1px, transparent 1px),
-          radial-gradient(circle at 35% 35%, rgba(255,255,255,0.4) 1px, transparent 1px),
-          radial-gradient(circle at 65% 35%, rgba(255,255,255,0.5) 1px, transparent 1px),
-          radial-gradient(circle at 45% 55%, rgba(255,255,255,0.7) 1px, transparent 1px),
-          radial-gradient(circle at 55% 75%, rgba(255,255,255,0.6) 1px, transparent 1px);
-        background-size: 80px 60px, 70px 50px, 90px 70px, 60px 40px, 85px 65px, 75px 55px, 80px 60px, 70px 50px, 65px 45px, 50px 35px, 55px 40px, 75px 55px, 85px 65px;
-        background-position: 0 0, 30px 15px, 60px 30px, 90px 45px, 120px 60px, 150px 75px, 180px 90px, 210px 105px, 240px 120px, 270px 135px, 300px 150px, 330px 165px, 360px 180px;
-        animation: worldMapFloat 20s linear infinite;
+          /* North America dots */
+          radial-gradient(circle at 15% 35%, rgba(255,255,255,0.8) 1.5px, transparent 1.5px),
+          radial-gradient(circle at 18% 32%, rgba(255,255,255,0.6) 1px, transparent 1px),
+          radial-gradient(circle at 20% 38%, rgba(255,255,255,0.7) 1px, transparent 1px),
+          radial-gradient(circle at 22% 35%, rgba(255,255,255,0.5) 1px, transparent 1px),
+          radial-gradient(circle at 16% 40%, rgba(255,255,255,0.6) 1px, transparent 1px),
+          radial-gradient(circle at 25% 42%, rgba(255,255,255,0.4) 1px, transparent 1px),
+          
+          /* South America dots */
+          radial-gradient(circle at 28% 55%, rgba(255,255,255,0.7) 1.5px, transparent 1.5px),
+          radial-gradient(circle at 30% 60%, rgba(255,255,255,0.6) 1px, transparent 1px),
+          radial-gradient(circle at 32% 65%, rgba(255,255,255,0.5) 1px, transparent 1px),
+          radial-gradient(circle at 29% 70%, rgba(255,255,255,0.6) 1px, transparent 1px),
+          radial-gradient(circle at 31% 75%, rgba(255,255,255,0.4) 1px, transparent 1px),
+          
+          /* Europe dots */
+          radial-gradient(circle at 48% 25%, rgba(255,255,255,0.8) 1.5px, transparent 1.5px),
+          radial-gradient(circle at 50% 28%, rgba(255,255,255,0.6) 1px, transparent 1px),
+          radial-gradient(circle at 52% 30%, rgba(255,255,255,0.5) 1px, transparent 1px),
+          radial-gradient(circle at 49% 32%, rgba(255,255,255,0.7) 1px, transparent 1px),
+          
+          /* Africa dots */
+          radial-gradient(circle at 52% 45%, rgba(255,255,255,0.8) 1.5px, transparent 1.5px),
+          radial-gradient(circle at 54% 50%, rgba(255,255,255,0.6) 1px, transparent 1px),
+          radial-gradient(circle at 51% 55%, rgba(255,255,255,0.7) 1px, transparent 1px),
+          radial-gradient(circle at 53% 60%, rgba(255,255,255,0.5) 1px, transparent 1px),
+          radial-gradient(circle at 55% 52%, rgba(255,255,255,0.4) 1px, transparent 1px),
+          
+          /* Asia dots */
+          radial-gradient(circle at 70% 30%, rgba(255,255,255,0.8) 1.5px, transparent 1.5px),
+          radial-gradient(circle at 75% 25%, rgba(255,255,255,0.6) 1px, transparent 1px),
+          radial-gradient(circle at 80% 32%, rgba(255,255,255,0.7) 1px, transparent 1px),
+          radial-gradient(circle at 72% 35%, rgba(255,255,255,0.5) 1px, transparent 1px),
+          radial-gradient(circle at 78% 38%, rgba(255,255,255,0.6) 1px, transparent 1px),
+          radial-gradient(circle at 82% 28%, rgba(255,255,255,0.4) 1px, transparent 1px),
+          
+          /* Australia dots */
+          radial-gradient(circle at 78% 70%, rgba(255,255,255,0.7) 1.5px, transparent 1.5px),
+          radial-gradient(circle at 80% 72%, rgba(255,255,255,0.5) 1px, transparent 1px),
+          radial-gradient(circle at 82% 68%, rgba(255,255,255,0.6) 1px, transparent 1px),
+          
+          /* Additional scattered dots for islands and details */
+          radial-gradient(circle at 85% 45%, rgba(255,255,255,0.4) 1px, transparent 1px),
+          radial-gradient(circle at 12% 65%, rgba(255,255,255,0.5) 1px, transparent 1px),
+          radial-gradient(circle at 65% 15%, rgba(255,255,255,0.3) 1px, transparent 1px),
+          radial-gradient(circle at 88% 55%, rgba(255,255,255,0.4) 1px, transparent 1px);
+        background-size: 100% 100%;
+        animation: worldMapFloat 25s linear infinite;
       }
       
       .network-overlay {

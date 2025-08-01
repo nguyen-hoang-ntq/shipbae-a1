@@ -226,9 +226,9 @@
         bottom: 30px;
         left: 50%;
         transform: translateX(-50%);
-        background: linear-gradient(45deg, #FF9500, #00FFFF);
+        background: linear-gradient(45deg, #FFFFFF, #00FFFF);
         border: none;
-        color: white;
+        color: #008080;
         padding: 12px 24px;
         border-radius: 25px;
         font-family: 'JetBrains Mono', monospace;
@@ -236,7 +236,7 @@
         font-size: 16px;
         cursor: pointer;
         transition: all 0.3s ease;
-        box-shadow: 0 0 20px rgba(255, 149, 0, 0.5);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
         z-index: 1000;
         animation: buttonPulse 2s infinite ease-in-out;
       }
@@ -244,7 +244,7 @@
       .now-button:hover {
         transform: translateX(-50%) scale(1.1);
         box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
-        background: linear-gradient(45deg, #00FFFF, #FF9500);
+        background: linear-gradient(45deg, #00FFFF, #FFFFFF);
       }
       
       .now-button:active {
@@ -560,7 +560,7 @@
        
        @keyframes buttonPulse {
          0%, 100% {
-           box-shadow: 0 0 20px rgba(255, 149, 0, 0.5);
+           box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
          }
          50% {
            box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
